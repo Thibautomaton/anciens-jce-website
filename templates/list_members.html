@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>list of all members</title>
+</head>
+<body>
+<table border="1">
+{% for member in members%}
+    <tr>
+        <th><a href="{{url_for('member_json', name = member.identifiant)}}">{{member.name}} {{member.first_name}}</a></th>
+
+        <th>{{member.role}}</th>
+    </tr>
+{% endfor %}
+</table>
+
+</body>
+</html>

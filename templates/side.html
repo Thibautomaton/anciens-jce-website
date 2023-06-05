@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2 style = 'text-align:center;'> Register </h2>
+
+<form method="POST" action = "{{url_for('side')}}">
+    {{side_form.hidden_tag }}
+    <fieldset>
+
+        <legend>Side Form</legend>
+        <div style="font-size:20px; font-weight: bold; margin-left: 200px"></div>
+
+        <br>
+        {{ side_form.Side.label }}
+        <br>
+        {{ side_form.Side }}
+
+        <br>
+        <br>
+        {{side_form.submit_g}}
+
+    </fieldset>
+</form>
+
+</body>
+</html>

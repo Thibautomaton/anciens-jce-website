@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>register</title>
+</head>
+<body>
+<h2 style = 'text-align:center;'> Register </h2>
+{%for message in int_form.Email.errors %}
+    <div>{{message}}</div>
+{%endfor%}
+
+
+<form method="POST" action="{{url_for('register_intervenant')}}">
+    {{int_form.hidden_tag}}
+    <fieldset>
+
+        <legend>Register Form</legend>
+        <div style="font-size:20px; font-weight: bold; margin-left: 200px">
+
+            {{int_form.Notification.label}}{{int_form.Notification}}
+            {{int_form.Email.label}}<br>
+            {{int_form.Email}}
+            <br>
+
+            {{int_form.Promo.label}}<br>
+            {{int_form.Promo}}
+            <br>
+
+        <br>
+        {{int_form.submit2}}
+        </div>
+    </fieldset>
+</form>
+
+        <div>
+            <p>You can also add projects going to this <a href = {{url_for('new_proj')}}>page</a></p>
+            <p>And see your information page <a href="{{url_for('member_json', name = name)}}">here</a></p>
+        </div>
+
+</body>
+</html>

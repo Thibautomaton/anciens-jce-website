@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Anciens JCE</title>
+</head>
+<body>
+  <h1>Welcome jce!</h1>
+
+  {% if name=="none" %}
+  <h3>You are currently not logged in</h3>
+  <h2>Please <a href="{{url_for('login')}}"> login </a></h2>
+  {% else %}
+  <h3><p>You are logged in as {{name}}</p>
+  <p>go <a href="{{url_for('logout')}}"> there </a> if you want to logout</p></h3>
+  <p>or check your information <a href="{{url_for('member_json', name=identifiant)}}">here</a></p>
+  <p>-><a href="{{url_for('new_proj')}}">add projects </a>you worked on</p>
+  {%endif%}
+<br>
+
+
+</body>
+<footer>
+    <p>Thank you report any bug at jceanciens@gmail.com</p>
+    <p>Feel free to use this email if you have something to address</p>
+</footer>
+</html>

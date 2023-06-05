@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>new project</title>
+</head>
+<body>
+<form method="POST" action="{{url_for('new_proj')}}">
+    {{form.hidden_tag}}
+    <fieldset>
+        <legend>Project Form</legend>
+        <div style="font-size:20px; font-weight: bold; margin-left: 200px">
+
+            {{form.Title.label}}<br>
+            {{form.Title}}
+            <br>
+
+            {{form.Client.label}}<br>
+            {{form.Client}}
+            <br>
+            {{form.Montant.label}}<br>
+            {{form.Montant}}
+            <br>
+
+        <br>
+        {{form.submit2}}
+        </div>
+    </fieldset>
+</form>
+
+<div>
+    <p>You can see your page by going to your information <a href="{{url_for('list_members')}}">page</a></p>
+</div>
+</body>
+</html>
